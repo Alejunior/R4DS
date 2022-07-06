@@ -1,0 +1,40 @@
+---
+title: "exercices"
+author: "ALE Junior"
+date: '2022-07-05'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r loading libraries}
+pacman::p_load(
+  tidyverse
+)
+```
+
+```{r exercice 3.2.4}
+ggplot(data = mpg)
+nrow(mpg)
+ncol(mpg)
+glimpse(mpg)
+?mpg
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = cyl, y = hwy))
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = drv, y = class))
+## to count how many value we have for a variable or a couple of variable
+count(mpg, class, drv)
+```
+
+```{r exercice 3.3.1}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = "blue"))
+## not expected color to be in the same bracket of aes
+?mpg
+mpg
+```
+
+
